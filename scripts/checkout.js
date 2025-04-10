@@ -5,7 +5,8 @@ import {formatCurrency} from './utils/money.js'
  import{deliveryOptions} from '../data/deliveryOptions.js'
 
 
-
+function renderOrderSummary()
+{
  let cartSummaryHTML='';
  cart.forEach((cartItem)=>
 {
@@ -196,8 +197,10 @@ function handleUpdateQuantity(productId,quantityInput)
       const {productId,deliveryOptionId}=element.dataset;
      
       updateDeliveryOption(productId,deliveryOptionId);
+      renderOrderSummary();
     })
   })
-
+}
+renderOrderSummary();
 
 
