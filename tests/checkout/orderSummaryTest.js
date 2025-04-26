@@ -34,7 +34,7 @@ describe('test suite : renderordersummary',()=>
         );
       });
       loadFromStorage();
-      renderOrderSummary();
+    renderOrderSummary();
   });
 
   it('displays the cart',()=>
