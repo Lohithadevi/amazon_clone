@@ -48,3 +48,13 @@ while(remainingDays>0)
   const dateString=deliveryDate.format('dddd , MMMM D');
   return dateString;
 }
+
+export function verifyDeliveryOptionId(deliveryOptionId)
+{
+  let flag=false;
+  deliveryOptions.forEach((deliveryOption)=>{
+    if(deliveryOptionId===deliveryOption.id)
+      flag=true;
+  });
+  return flag;
+}
