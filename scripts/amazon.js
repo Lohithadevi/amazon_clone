@@ -41,14 +41,14 @@ products.forEach((products)=>
             <option value="10">10</option>
           </select>
         </div>
-
+        ${products.extraInfoHTML()}
         <div class="product-spacer"></div>
 
         <div class="added-to-cart">
           <img src="images/icons/checkmark.png">
           Added
         </div>
-
+        
         <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${products.id}">
           Add to Cart
         </button>

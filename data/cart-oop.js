@@ -111,7 +111,7 @@ updateDeliveryOption(ProductId,deliveryOptionId)
 ;
 Cart.loadFromStorage();
 Cart.addToCart("3ebe75dc-64d2-4137-8860-1f5a963e534b");
-console.log(Cart);
+
 
 
 // local storage
