@@ -8,10 +8,9 @@ products.forEach((products)=>
   productsHTML+=`
       <div class="product-container">
         <div class="product-image-container">
-          <img class="product-image" src="${products.image}">
+        <img class="product-image" src="${products.image}">
         </div>
-
-        <div class="product-name limit-text-to-2-lines">
+         <div class="product-name limit-text-to-2-lines">
           ${products.name}
         </div>
 
@@ -41,7 +40,10 @@ products.forEach((products)=>
             <option value="10">10</option>
           </select>
         </div>
+       
         ${products.extraInfoHTML()}
+       ${products.instructionsLink()}
+       ${products.warrantyLink()}
         <div class="product-spacer"></div>
 
         <div class="added-to-cart">

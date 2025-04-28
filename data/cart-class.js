@@ -119,9 +119,3 @@ let bussiness =new Cart('buss-oop');
 
 
 
-
-
-
-
-
-
