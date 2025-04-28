@@ -112,8 +112,7 @@ export class Cart
 
 let cart=new Cart('cart-oop');
 let bussiness =new Cart('buss-oop');
-console.log(cart);
-console.log(bussiness);
+
 
 
 
