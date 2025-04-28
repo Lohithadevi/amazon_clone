@@ -2,15 +2,15 @@ import{verifyDeliveryOptionId} from'../data/deliveryOptions.js'
 export class Cart
 {
   cartItems;
-  localStorage;
+  #localStorageKey;
 
-  constructor(localstorage)
+  constructor(localstoragekey)
   {
-    this.localStorage=localstorage;
-    this.loadFromStorage();
+    this.#localStorageKey=localstoragekey;
+    this.#loadFromStorage();
   }
-  loadFromStorage(){
-    this.cartItems=JSON.parse(localStorage.getItem(this.localStorage));
+  #loadFromStorage(){
+    this.cartItems=JSON.parse(localStorage.getItem(this.#localStorageKey));
   if(!this.cartItems)
   {this.cartItems=
     [
@@ -30,7 +30,7 @@ export class Cart
   };
   };
   saveToStorage(){
-    localStorage.setItem(this.localStorage,JSON.stringify(this.cartItems));
+    localStorage.setItem(this.#localStorageKey,JSON.stringify(this.cartItems));
   };
   addToCart(productId){
     let matchingItem;
@@ -112,7 +112,6 @@ export class Cart
 
 let cart=new Cart('cart-oop');
 let bussiness =new Cart('buss-oop');
-
 console.log(cart);
 console.log(bussiness);
 
