@@ -1,9 +1,13 @@
 import {cart,addToCart, calculateCartQunatity} from '../data/cart.js'
-import {products,loadProducts} from '../data/products.js'
+import {products,loadProductFetch} from '../data/products.js'
 import {formatCurrency} from './utils/money.js'
 // import { loadProducts } from '../data/products.js';
 
-loadProducts(renderProductGrid);
+loadProductFetch().then(()=>
+{
+  renderProductGrid();
+});
+
 export function renderProductGrid()
 {
 
