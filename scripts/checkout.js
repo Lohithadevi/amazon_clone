@@ -9,12 +9,19 @@ import {loadCart} from '../data/cart.js'
 
 async function loadPage()
 {
-  await loadProductFetch();
+  try{
+    await loadProductFetch();
   await new Promise((resolve)=>
       {
         loadCart(()=>
         {resolve();});
       });
+  }catch(error)
+  {
+    console.log("error raised");
+    console.log(error);
+  }
+  
   renderCheckoutHeader();
   renderOrderSummary();
   renderPaymentSummary();

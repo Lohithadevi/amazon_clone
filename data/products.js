@@ -5,7 +5,7 @@ export function loadProductFetch()
 {
 
 const  promise=fetch(
-  'https://supersimplebackend.dev/products'
+  'https://error.supersimplebackend.dev/products'
     ).then((response)=>
   {
     return response.json();
@@ -26,6 +26,7 @@ const  promise=fetch(
   return promise;
 };
 
+
 // export function loadProducts(fun)
 // {
 // const xhr=new XMLHttpRequest();
@@ -44,12 +45,11 @@ const  promise=fetch(
 //     fun();
  
 // });
-// xhr.open('GET','https://supersimplebackend.dev/products');
-// xhr.send();
+
 
 // }
 // ;
-// loadProducts();
+
 export function getProduct(productId)
 {
   
