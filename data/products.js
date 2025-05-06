@@ -5,7 +5,7 @@ export function loadProductFetch()
 {
 
 const  promise=fetch(
-  'https://error.supersimplebackend.dev/products'
+  'https://supersimplebackend.dev/products'
     ).then((response)=>
   {
     return response.json();
