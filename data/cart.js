@@ -129,4 +129,10 @@ export function updateDeliveryOption(ProductId,deliveryOptionId)
     
   }
   
-
+export async function loadCartFetch()
+{
+ let response= await fetch('http://supersimplebackend.dev/cart');
+ let text=await response.text();
+ console.log(text);
+ return text;
+}

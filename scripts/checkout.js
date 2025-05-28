@@ -5,17 +5,21 @@ import {renderPaymentSummary} from './checkout/paymentSummary.js'
 import {Cart} from'../data/cart-class.js'
 // import '../data/backendPract.js'
 import {loadProductFetch} from '../data/products.js'
-import {loadCart} from '../data/cart.js'
+import {loadCart, loadCartFetch} from '../data/cart.js'
 
 async function loadPage()
 {
   try{
-    await loadProductFetch();
+
+    
+    Promise.all([loadProductFetch(),loadCartFetch()]);
+
   await new Promise((resolve)=>
       {
         loadCart(()=>
         {resolve();});
       });
+      
   }catch(error)
   {
     console.log("error raised");
