@@ -124,14 +124,14 @@ export function updateDeliveryOption(ProductId,deliveryOptionId)
       console.log(xhr.response);
       fun();
     });
-    xhr.open('GET','http://supersimplebackend.dev/cart');
+    xhr.open('GET','https://supersimplebackend.dev/cart');
     xhr.send();
     
   }
   
 export async function loadCartFetch()
 {
- let response= await fetch('http://supersimplebackend.dev/cart');
+ let response= await fetch('https://supersimplebackend.dev/cart');
  let text=await response.text();
  console.log(text);
  return text;
